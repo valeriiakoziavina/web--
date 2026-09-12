@@ -1,10 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Валерія Козявіна — студентське портфоліо</title>
+    <meta name="description" content="Особисте портфоліо студентки прикладної математики: освіта, навички, хобі, книги, музика, цілі та контакти.">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+
+    <meta property="og:title" content="Валерія Козявіна — студентське портфоліо">
+    <meta property="og:description" content="Особисте портфоліо студентки прикладної математики: освіта, навички, хобі, книги, музика, цілі та контакти.">
+    <meta property="og:image" content="img/og-cover.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+<header class="header">
+    <div class="header__inner">
+
+        <a class="header__logo" href="#hero">Валерія</a>
+
+        <nav class="nav" aria-label="Основна навігація">
+            <details class="nav__toggle">
+                <summary class="nav__toggle-btn" aria-label="Відкрити меню">☰ Меню</summary>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#hero" aria-current="page">Про мене</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#education-school">Школа</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#education-university">Університет</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#favorite-subjects">Улюблені предмети</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#skills">Навички</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#hobbies">Хобі</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#books">Книги</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#music">Музика</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#movies">Фільми</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#goals">Цілі</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#facts">Факти</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#quotes">Цитати</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contacts">Контакти</a></li>
+                </ul>
+            </details>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main">
+
+    <!-- 1. Про мене -->
+    <section class="hero" id="hero">
+        <div class="hero__inner">
+
+            <picture class="hero__photo-wrap">
+                <source media="(min-width: 768px)" srcset="img/photo-desktop.jpg">
+                <img
+                        class="hero__photo"
+                        src="img/photo-mobile.jpg"
+                        alt="Фото Валерії"
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                >
+            </picture>
+
+            <h1 class="hero__name">Валерія</h1>
+
+            <p class="hero__intro">
+                Привіт! Мене звати Валерія, мені 19 років. Я народилася в місті Кам'янське,
+                Дніпропетровська область. Вже третій рік проживаю у Львові.
+            </p>
+
+            <address class="hero__contacts">
+                <a class="hero__contact-link" href="tel:+380954059256">+38 095 405 92 56</a>
+                <a class="hero__contact-link" href="mailto:kbwj277@gmail.com">kbwj277@gmail.com</a>
+            </address>
+
+        </div>
+    </section>
+
+    <!-- 2. Освіта: школа -->
+    <section class="education" id="education-school">
+        <h2 class="education__title">Освіта: школа</h2>
+        <article class="education__card">
+            <p class="education__text">
+                Закінчила ліцей №44 у місті Кам'янське у 2024 році.
+            </p>
+        </article>
+    </section>
+
+    <!-- 3. Освіта: університет -->
+    <section class="education" id="education-university">
+        <h2 class="education__title">Освіта: університет</h2>
+        <article class="education__card">
+            <p class="education__text">
+                Навчаюся у Львівському національному університеті ім. Івана Франка
+                за спеціальністю «Прикладна математика», зараз на 3 курсі.
+                Найбільше запам'яталися дисципліни: чисельні методи лінійної алгебри
+                та дискретна математика.
+            </p>
+        </article>
+    </section>
+
+    <!-- 4. Улюблені навчальні предмети -->
+    <section class="subjects" id="favorite-subjects">
+        <h2 class="subjects__title">Улюблені навчальні предмети</h2>
+
+        <ul class="subjects__list">
+            <li class="subjects__item">
+                <h3 class="subjects__name">Чисельні методи лінійної алгебри</h3>
+                <p class="subjects__reason">
+                    Приваблює можливістю побачити, як абстрактні математичні концепції
+                    перетворюються на реальні працюючі алгоритми: складні обчислення та
+                    системи рівнянь знаходять точні й практичні рішення через програмні обчислення.
+                </p>
+            </li>
+            <li class="subjects__item">
+                <h3 class="subjects__name">Дискретна математика</h3>
+                <p class="subjects__reason">
+                    Захоплює суворою логікою, чіткістю структур та математичним апаратом, що є
+                    фундаментом комп'ютерних наук. Розвиває абстрактне мислення й вчить
+                    розкладати алгоритмічні задачі на теорію графів, комбінаторику та логіку.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 5. Навички -->
+    <section class="skills" id="skills">
+        <h2 class="skills__title">Навички</h2>
+
+        <div class="skills__group">
+            <h3 class="skills__group-title">Технічні навички</h3>
+            <ul class="skills__list">
+                <li class="skills__item">
+                    <span class="skills__name">C++ / C#</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="C++ / C#: 85%">
+              <span class="skills__bar-fill skills__bar-fill--85"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Алгоритми та структури даних</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Алгоритми та структури даних: 80%">
+              <span class="skills__bar-fill skills__bar-fill--80"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Дискретна математика та чисельні методи</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Дискретна математика та чисельні методи: 90%">
+              <span class="skills__bar-fill skills__bar-fill--90"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Об'єктно-орієнтоване програмування (ООП)</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="ООП: 75%">
+              <span class="skills__bar-fill skills__bar-fill--75"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Математичний аналіз та статистика</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Математичний аналіз та статистика: 85%">
+              <span class="skills__bar-fill skills__bar-fill--85"></span>
+            </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills__group">
+            <h3 class="skills__group-title">М'які навички</h3>
+            <ul class="skills__list">
+                <li class="skills__item">
+                    <span class="skills__name">Аналітичне мислення та вирішення задач</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Аналітичне мислення: 95%">
+              <span class="skills__bar-fill skills__bar-fill--95"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Уважність до деталей і критичний аналіз</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Уважність до деталей: 90%">
+              <span class="skills__bar-fill skills__bar-fill--90"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Швидка адаптація та самонавчання</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Швидка адаптація: 85%">
+              <span class="skills__bar-fill skills__bar-fill--85"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Командна співпраця та відповідальність</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Командна співпраця: 80%">
+              <span class="skills__bar-fill skills__bar-fill--80"></span>
+            </span>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__name">Організованість та тайм-менеджмент</span>
+                    <span class="skills__bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Організованість: 75%">
+              <span class="skills__bar-fill skills__bar-fill--75"></span>
+            </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 6. Хобі та захоплення -->
+    <section class="hobbies" id="hobbies">
+        <h2 class="hobbies__title">Хобі та захоплення</h2>
+        <ul class="hobbies__grid">
+            <li class="hobbies__card">
+                <img class="hobbies__icon" src="img/icons/reading.svg" alt="" width="48" height="48" loading="lazy">
+                <h3 class="hobbies__name">Читання</h3>
+            </li>
+            <li class="hobbies__card">
+                <img class="hobbies__icon" src="img/icons/guitar.svg" alt="" width="48" height="48" loading="lazy">
+                <h3 class="hobbies__name">Гра на гітарі</h3>
+            </li>
+            <li class="hobbies__card">
+                <img class="hobbies__icon" src="img/icons/travel.svg" alt="" width="48" height="48" loading="lazy">
+                <h3 class="hobbies__name">Подорожі</h3>
+            </li>
+            <li class="hobbies__card">
+                <img class="hobbies__icon" src="img/icons/sport.svg" alt="" width="48" height="48" loading="lazy">
+                <h3 class="hobbies__name">Спорт</h3>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 7. Улюблені книги -->
+    <section class="books" id="books">
+        <h2 class="books__title">Улюблені книги</h2>
+        <!-- ТУТ ПОТРІБНО ЩЕ ЩОНАЙМЕНШЕ 2 ПОЗИЦІЇ (мінімум 5 за завданням) -->
+        <ul class="books__grid">
+            <li class="books__card">
+                <img class="books__cover" src="img/books/makova-viyna.jpg" alt="Обкладинка трилогії «Макова війна»" width="140" height="200" loading="lazy">
+                <h3 class="books__name">«Макова війна» (трилогія)</h3>
+                <p class="books__author">Ребекка Кван</p>
+                <p class="books__impression">
+                    Вразило, що в книзі немає чіткого поділу на «добро» і «зло» — авторка чудово
+                    зобразила сіру мораль персонажів і суспільства.
+                </p>
+            </li>
+            <li class="books__card">
+                <img class="books__cover" src="img/books/ptah-sliz.jpg" alt="Обкладинка трилогії «Той птах, що п'є сльози»" width="140" height="200" loading="lazy">
+                <h3 class="books__name">«Той птах, що п'є сльози» (трилогія)</h3>
+                <p class="books__author">Лі Йондо</p>
+                <p class="books__impression">
+                    Вражає нешаблонним східним фольклором та неоднозначними персонажами, чия складна
+                    філософія руйнує звичні уявлення про героїзм.
+                </p>
+            </li>
+            <li class="books__card">
+                <img class="books__cover" src="img/books/ya-romantyka.jpg" alt="Обкладинка твору «Я (Романтика)»" width="140" height="200" loading="lazy">
+                <h3 class="books__name">«Я (Романтика)»</h3>
+                <p class="books__author">Микола Хвильовий</p>
+                <p class="books__impression">
+                    Вражає моторошним і глибоким психологізмом роздвоєння особистості героя, який
+                    розривається між відданістю революції та любов'ю до матері.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 8. Улюблена музика -->
+    <section class="music" id="music">
+        <h2 class="music__title">Улюблена музика</h2>
+        <ul class="music__list">
+            <li class="music__item">
+                <h3 class="music__song">Loser</h3>
+                <p class="music__meta">Tame Impala · альбом «Deadbeat» (2025)</p>
+                <p class="music__genres">Психоделічний поп, фанк, інді-поп</p>
+            </li>
+            <li class="music__item">
+                <h3 class="music__song">The Color Violet</h3>
+                <p class="music__meta">Tory Lanez · альбом «Alone at Prom» (2021)</p>
+                <p class="music__genres">Синті-поп, R&amp;B 80-х, ретровейв</p>
+            </li>
+            <li class="music__item">
+                <h3 class="music__song">Purple Rain</h3>
+                <p class="music__meta">Prince and the Revolution · альбом «Purple Rain» (1984)</p>
+                <p class="music__genres">Поп-рок, психоделічний соул, R&amp;B, арена-рок</p>
+            </li>
+            <li class="music__item">
+                <h3 class="music__song">Canal Street</h3>
+                <p class="music__meta">sombr · альбом «I Barely Know Her» (2025)</p>
+                <p class="music__genres">Інді-рок, альтернативний поп, акустичний інді-фолк</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 9. Улюблені фільми — таблиця (обов'язковий елемент за завданням) -->
+    <section class="movies" id="movies">
+        <h2 class="movies__title">Улюблені фільми</h2>
+        <table class="movies__table">
+            <caption class="movies__caption">Фільми та серіали з особистою оцінкою за IMDb</caption>
+            <thead>
+            <tr>
+                <th scope="col">Назва</th>
+                <th scope="col">Рік</th>
+                <th scope="col">Оцінка IMDb</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>Залізна людина</td><td>2008</td><td>7.9</td></tr>
+            <tr><td>Залізна людина 2</td><td>2010</td><td>6.9</td></tr>
+            <tr><td>Залізна людина 3</td><td>2013</td><td>7.1</td></tr>
+            <tr><td>Спокута</td><td>2007</td><td>7.8</td></tr>
+            <tr><td>Початок</td><td>2010</td><td>8.8</td></tr>
+            <tr><td>10 речей, які я в тобі ненавиджу</td><td>1999</td><td>7.3</td></tr>
+            <tr><td>Убити Білла. Фільм 1</td><td>2003</td><td>8.2</td></tr>
+            <tr><td>Убити Білла. Фільм 2</td><td>2004</td><td>8.0</td></tr>
+            <tr><td>Константин: Володар темряви</td><td>2005</td><td>7.0</td></tr>
+            <tr><td>Леон-кілер</td><td>1994</td><td>8.5</td></tr>
+            <tr><td>Людина-павук: Абсолютно новий день</td><td>2026</td><td>7.9</td></tr>
+            <tr><td>Месники: Війна нескінченності</td><td>2018</td><td>8.4</td></tr>
+            <tr><td>Месники: Завершення</td><td>2019</td><td>8.4</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 13. Цілі на найближчий рік -->
+    <section class="goals" id="goals">
+        <h2 class="goals__title">Цілі на найближчий рік</h2>
+        <ul class="goals__list">
+            <li class="goals__item">
+                <h3 class="goals__name">Покращити фізичний стан та налагодити режим сну</h3>
+                <p class="goals__progress">
+                    Маркер прогресу: стабільний підйом і відхід до сну в один і той самий час,
+                    мінімум 3 тренування або активні прогулянки на тиждень.
+                </p>
+            </li>
+            <li class="goals__item">
+                <h3 class="goals__name">Прочитати запланований список літератури</h3>
+                <p class="goals__progress">
+                    Маркер прогресу: прочитати щонайменше 10–12 книг за рік (зокрема складне фентезі
+                    та психологічну художню літературу) із веденням коротких нотаток про враження.
+                </p>
+            </li>
+            <li class="goals__item">
+                <h3 class="goals__name">Розвинути побутові й кулінарні навички</h3>
+                <p class="goals__progress">
+                    Маркер прогресу: освоїти 5–7 нових складних і цікавих рецептів та готувати їх
+                    на регулярній основі.
+                </p>
+            </li>
+            <li class="goals__item">
+                <h3 class="goals__name">Оптимізувати власні фінанси та сформувати подушку безпеки</h3>
+                <p class="goals__progress">
+                    Маркер прогресу: ведення щомісячного трекінгу доходів/витрат і відкладання
+                    фіксованого відсотка з будь-яких надходжень.
+                </p>
+            </li>
+            <li class="goals__item">
+                <h3 class="goals__name">Виділяти час на особисті хобі та відновлення</h3>
+                <p class="goals__progress">
+                    Маркер прогресу: щотижневі «цифрові детокси» або вечори без ґаджетів за переглядом
+                    якісного кіно, настільними іграми чи читанням.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 14. Цікаві факти про мене -->
+    <section class="facts" id="facts">
+        <h2 class="facts__title">Цікаві факти про мене</h2>
+        <ul class="facts__list">
+            <li class="facts__item">Легко запам'ятовую дрібні обличчя, деталі інтер'єрів чи випадкові фрази, але можу забути, куди поклала речі кілька хвилин тому.</li>
+            <li class="facts__item">Люблю шукати у звичайних речах чи подіях приховану логіку або аналізувати причинно-наслідкові зв'язки.</li>
+            <li class="facts__item">Завжди звертаю увагу на візуальну естетику довкола — від обкладинок книг до кольорової гами в кіно.</li>
+            <li class="facts__item">Можу довго й захоплено досліджувати випадкову нову тему чи явище, якщо воно щиро приверне мою увагу.</li>
+            <li class="facts__item">Віддаю перевагу якісній самотності для відновлення ресурсів, ніж гучним і виснажливим компаніям.</li>
+            <li class="facts__item">Ціную в людях щирість, пряму комунікацію та почуття гумору без зайвого награного драматизму.</li>
+        </ul>
+    </section>
+
+    <!-- 15. Улюблені цитати -->
+    <section class="quotes" id="quotes">
+        <h2 class="quotes__title">Улюблені цитати</h2>
+        <ul class="quotes__list">
+            <li>
+                <blockquote class="quotes__quote">
+                    <p>«Світ не ділиться на хороших людей і поетичних лиходіїв. Ми всі маємо в собі і світло, і темряву.»</p>
+                    <cite class="quotes__author">— Джоан Роулінг</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote class="quotes__quote">
+                    <p>«Найскладніше — це прийняти рішення діяти, все інше — лише наполегливість.»</p>
+                    <cite class="quotes__author">— Амелія Ергарт</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote class="quotes__quote">
+                    <p>«Хаос — це не провалля. Хаос — це драбина.»</p>
+                    <cite class="quotes__author">— Джордж Р. Р. Мартін</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote class="quotes__quote">
+                    <p>«Те, що ми знаємо — це крапля, а те, чого ми не знаємо — океан.»</p>
+                    <cite class="quotes__author">— Ісаак Ньютон</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote class="quotes__quote">
+                    <p>«Справжня свобода полягає в тому, щоб бути господарем самого себе.»</p>
+                    <cite class="quotes__author">— Мишель де Монтень</cite>
+                </blockquote>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 16. Контакти / зворотний зв'язок -->
+    <section class="contacts" id="contacts">
+        <h2 class="contacts__title">Контакти</h2>
+
+        <form class="contacts__form" novalidate>
+            <div class="contacts__field">
+                <label class="contacts__label" for="name">Ім'я</label>
+                <input class="contacts__input" type="text" id="name" name="name" required minlength="2">
+            </div>
+
+            <div class="contacts__field">
+                <label class="contacts__label" for="email">E-mail</label>
+                <input class="contacts__input" type="email" id="email" name="email" required
+                       pattern="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}">
+            </div>
+
+            <div class="contacts__field">
+                <label class="contacts__label" for="subject">Тема</label>
+                <select class="contacts__select" id="subject" name="subject" required>
+                    <option value="">Оберіть тему</option>
+                    <option value="project">Співпраця / проєкт</option>
+                    <option value="question">Питання</option>
+                    <option value="other">Інше</option>
+                </select>
+            </div>
+
+            <div class="contacts__field">
+                <label class="contacts__label" for="message">Повідомлення</label>
+                <textarea class="contacts__textarea" id="message" name="message" required minlength="10" rows="5"></textarea>
+            </div>
+
+            <div class="contacts__field contacts__field--checkbox">
+                <input class="contacts__checkbox" type="checkbox" id="consent" name="consent" required>
+                <label class="contacts__label" for="consent">Погоджуюсь на обробку персональних даних</label>
+            </div>
+
+            <button class="contacts__submit" type="submit">Надіслати</button>
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer" id="footer">
+    <p class="footer__copy">&copy; 2026 Валерія Козявіна. Усі права захищено.</p>
+    <a class="footer__social" href="https://www.instagram.com/qwkssv/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+    <a class="footer__top-link" href="#hero">Нагору ↑</a>
+</footer>
 
 </body>
 </html>
