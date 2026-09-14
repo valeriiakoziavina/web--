@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
 
+
 :root {
-    /* кольори */
-    --color-bg:          #FAF7FF;
-    --color-bg-alt:      #F1ECFB;
+    --color-bg:          #F3F5FA;
+    --color-bg-alt:      #E4E9F5;
     --color-surface:     #FFFFFF;
-    --color-text:        #221C3D;
-    --color-text-muted:  #5B5480;
-    --color-accent:      #7C4FE0;
-    --color-accent-2:    #C97A1F;
+    --color-text:        #232A3D;
+    --color-text-muted:  #5C6480;
+    --color-accent:      #555D82;
+    --color-accent-2:    #8FA0C7;
     --color-on-accent:   #FFFFFF;
-    --color-border:      rgba(34, 28, 61, 0.14);
+    --color-border:      rgba(35, 42, 61, 0.14);
+    --surface-blur:      0rem;
 
     /* форма */
-    --radius-sm: 6px;
-    --radius-md: 14px;
-    --radius-lg: 26px;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.875rem;
+    --radius-lg: 1.625rem;
 
     /* тіні */
-    --shadow-md: 0 12px 30px rgba(124, 79, 224, 0.16);
-    --shadow-lg: 0 20px 50px rgba(124, 79, 224, 0.22);
+    --shadow-md: 0 12px 30px rgba(85, 93, 130, 0.16);
+    --shadow-lg: 0 20px 50px rgba(85, 93, 130, 0.22);
 
-    /* відступи (спейс-скейл) */
+    /* відступи */
     --space-2xs: 0.25rem;
     --space-xs:  0.5rem;
     --space-sm:  0.75rem;
@@ -39,26 +40,28 @@
     --header-height: 4rem;
 }
 
+/* темна тема */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg:          #12102A;
-        --color-bg-alt:      #1B1740;
-        --color-surface:     #1F1B45;
-        --color-text:        #EDEBFA;
-        --color-text-muted:  #B4AED9;
-        --color-accent:      #B084F5;
-        --color-accent-2:    #F2B84B;
-        --color-on-accent:   #17132E;
-        --color-border:      rgba(237, 235, 250, 0.14);
+        --color-bg:          #0E111C;
+        --color-bg-alt:      #191F30;
+        --color-surface:     rgba(255, 255, 255, 0.05);
+        --color-text:        #E6E9F5;
+        --color-text-muted:  #A6ADC9;
+        --color-accent:      #7E88B8;
+        --color-accent-2:    #4A5480;
+        --color-on-accent:   #0E111C;
+        --color-border:      rgba(230, 233, 245, 0.14);
+        --surface-blur:      1rem;
 
-        --shadow-md: 0 12px 30px rgba(6, 4, 20, 0.5);
-        --shadow-lg: 0 24px 60px rgba(6, 4, 20, 0.6);
+        --shadow-md: 0 12px 34px rgba(126, 136, 184, 0.28);
+        --shadow-lg: 0 24px 60px rgba(126, 136, 184, 0.4);
     }
 }
 
-/* --------------------------------------------------------------------------
+/*
    2. Скидання та база
-   -------------------------------------------------------------------------- */
+*/
 *, *::before, *::after { box-sizing: border-box; }
 html, body, ul, ol, figure, blockquote, h1, h2, h3, p { margin: 0; padding: 0; }
 li { list-style: none; }
@@ -75,7 +78,7 @@ body {
     line-height: 1.65;
     color: var(--color-text);
     background:
-            radial-gradient(ellipse at top, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 60%),
+            radial-gradient(ellipse at top, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 60%),
             var(--color-bg);
 }
 
@@ -86,21 +89,21 @@ h3 { font-size: clamp(1.05rem, 0.98rem + 0.4vw, 1.3rem); font-weight: 600; }
 
 a { color: var(--color-accent); text-decoration: none; }
 
-/* фокус видимий для всієї сторінки — доступність */
+/* фокус видимий для всієї сторінки — доступність (:focus-visible) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-    outline: 3px solid var(--color-accent-2);
-    outline-offset: 3px;
+    outline: 0.1875rem solid var(--color-accent-2);
+    outline-offset: 0.1875rem;
     border-radius: var(--radius-sm);
 }
 
-/* --------------------------------------------------------------------------
+/*
    3. Skip-link
-   -------------------------------------------------------------------------- */
+ */
 .skip-link {
     position: absolute;
     top: -100%;
@@ -116,9 +119,9 @@ summary:focus-visible {
     top: var(--space-xs);
 }
 
-/* --------------------------------------------------------------------------
+/*
    4. Контейнер-утиліта
-   -------------------------------------------------------------------------- */
+*/
 main section,
 .header__inner,
 .footer {
@@ -134,15 +137,14 @@ main > section {
 }
 main > section:last-of-type { border-bottom: none; }
 
-/* --------------------------------------------------------------------------
-   5. Шапка (header) + навігація
-   -------------------------------------------------------------------------- */
+/*   5. Шапка (header) + навігація
+*/
 .header {
     position: sticky;
     top: 0;
     z-index: 50;
     background: color-mix(in srgb, var(--color-bg) 88%, transparent);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(calc(0.625rem + var(--surface-blur)));
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -161,24 +163,22 @@ main > section:last-of-type { border-bottom: none; }
     font-weight: 700;
     font-size: 1.35rem;
     color: var(--color-text);
-    padding-bottom: 2px;
 }
-/* ::after — підкреслення логотипу, що з'являється при наведенні */
+/* ::after — підкреслення логотипу, лінія намальована через box-shadow */
 .header__logo::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -0.2em;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
+    height: 0;
+    box-shadow: 0 2px 0 var(--color-accent-2);
+    opacity: 0;
+    transition: opacity 0.25s ease;
 }
 .header__logo:hover::after,
 .header__logo:focus-visible::after {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
 .nav__toggle summary {
@@ -213,6 +213,7 @@ main > section:last-of-type { border-bottom: none; }
     margin-top: var(--space-sm);
     padding: var(--space-sm);
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
@@ -226,27 +227,28 @@ main > section:last-of-type { border-bottom: none; }
     font-weight: 500;
     transition: background 0.2s ease, color 0.2s ease;
 }
+/* :hover  */
 .nav__link:hover { background: var(--color-bg-alt); color: var(--color-accent); }
+/* :active  */
 .nav__link:active { transform: translateY(1px); }
 .nav__link[aria-current="page"] { color: var(--color-accent); font-weight: 600; }
 
-/* --------------------------------------------------------------------------
-   6. Hero / Про мене
-   -------------------------------------------------------------------------- */
+/*   6. Hero / Про мене
+*/
 .hero {
     position: relative;
     overflow: hidden;
     text-align: center;
     padding-top: var(--space-2xl);
 }
-/* ::before — декоративна градієнтна пляма позаду героя */
+/* ::before — декоративна градієнтна пляма позаду */
 .hero::before {
     content: '';
     position: absolute;
     top: -20%;
     left: 50%;
     width: 140vw;
-    max-width: 900px;
+    max-width: 56.25rem;
     aspect-ratio: 1;
     transform: translateX(-50%);
     background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 65%);
@@ -266,15 +268,16 @@ main > section:last-of-type { border-bottom: none; }
 
 .hero__photo-wrap { position: relative; }
 .hero__photo {
-    width: clamp(120px, 30vw, 180px);
-    height: clamp(120px, 30vw, 180px);
+    width: clamp(7.5rem, 30vw, 11.25rem);
+    height: clamp(7.5rem, 30vw, 11.25rem);
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--color-surface);
     box-shadow: 0 0 0 3px var(--color-accent), var(--shadow-lg);
 }
 
-.hero__name { background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+.hero__name {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -295,14 +298,15 @@ main > section:last-of-type { border-bottom: none; }
     border-radius: var(--radius-sm);
     transition: border-color 0.2s ease, color 0.2s ease;
 }
+/* :hover  */
 .hero__contact-link:hover { border-color: var(--color-accent); color: var(--color-accent); }
 
-/* --------------------------------------------------------------------------
-   7. Освіта
-   -------------------------------------------------------------------------- */
+/*   7. Освіта
+*/
 .education__title { margin-bottom: var(--space-md); }
 .education__card {
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-md);
@@ -311,9 +315,8 @@ main > section:last-of-type { border-bottom: none; }
 }
 .education__text { color: var(--color-text-muted); }
 
-/* --------------------------------------------------------------------------
-   8. Улюблені предмети
-   -------------------------------------------------------------------------- */
+/*   8. Улюблені предмети
+*/
 .subjects__title { margin-bottom: var(--space-md); }
 .subjects__list {
     display: flex;
@@ -328,14 +331,15 @@ main > section:last-of-type { border-bottom: none; }
 .subjects__name { margin-bottom: var(--space-2xs); }
 .subjects__reason { color: var(--color-text-muted); max-width: var(--content-width); }
 
-/* --------------------------------------------------------------------------
-   9. Навички (шкала — лише CSS)
-   -------------------------------------------------------------------------- */
+/*
+   9. Навички (шкала — лише CSS, ширина через клас-модифікатор БЕМ)
+*/
 .skills__title { margin-bottom: var(--space-lg); }
 .skills__group { margin-bottom: var(--space-lg); }
 .skills__group-title { margin-bottom: var(--space-md); color: var(--color-accent); }
 
 .skills__list { display: flex; flex-direction: column; gap: var(--space-md); }
+/* :not() */
 .skills__item:not(:last-child) { margin-bottom: 0; }
 
 .skills__name { display: block; margin-bottom: var(--space-2xs); font-weight: 500; }
@@ -344,7 +348,7 @@ main > section:last-of-type { border-bottom: none; }
     display: block;
     position: relative;
     width: 100%;
-    height: 10px;
+    height: 0.625rem;
     background: var(--color-bg-alt);
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -364,13 +368,12 @@ main > section:last-of-type { border-bottom: none; }
 .skills__bar-fill--90 { width: 90%; }
 .skills__bar-fill--95 { width: 95%; }
 
-/* --------------------------------------------------------------------------
-   10. Хобі — CSS Grid
-   -------------------------------------------------------------------------- */
+/*   10. Хобі — CSS Grid (обов'язковий repeat(auto-fit, minmax(...,1fr)))
+*/
 .hobbies__title { margin-bottom: var(--space-lg); }
 .hobbies__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8.75rem, 1fr));
     gap: var(--space-md);
 }
 .hobbies__card {
@@ -381,39 +384,43 @@ main > section:last-of-type { border-bottom: none; }
     gap: var(--space-sm);
     padding: var(--space-lg) var(--space-md);
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     text-align: center;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+/* :hover  */
 .hobbies__card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-/* nth-child — легкий акцент на кожній третій картці */
+/* :nth-child  */
 .hobbies__card:nth-child(3n) { border-color: var(--color-accent); }
-/* ::after — декоративний бейдж у кутку картки (абсолютне позиціювання) */
+/* ::after — декоративний бейдж у кутку картки */
 .hobbies__card::after {
     content: '';
     position: absolute;
     top: var(--space-sm);
     right: var(--space-sm);
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     border-radius: 50%;
     background: var(--color-accent-2);
 }
-.hobbies__icon { width: 48px; height: 48px; }
+.hobbies__icon { width: 3rem; height: 3rem; }
 
-/* --------------------------------------------------------------------------
-   11. Книги — CSS Grid
-   -------------------------------------------------------------------------- */
-.books__title { margin-bottom: var(--space-lg); }
+/*   11. Книги — CSS Grid (галерея, обов'язковий repeat(auto-fit, minmax(...,1fr)))
+*/
+
+books__title { margin-bottom: var(--space-lg); }
+
 .books__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
     gap: var(--space-lg);
 }
 .books__card {
     position: relative;
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-md);
@@ -435,9 +442,9 @@ main > section:last-of-type { border-bottom: none; }
 }
 .books__impression { color: var(--color-text-muted); }
 
-/* --------------------------------------------------------------------------
+/*
    12. Музика
-   -------------------------------------------------------------------------- */
+*/
 .music__title { margin-bottom: var(--space-lg); }
 .music__list {
     display: flex;
@@ -449,21 +456,23 @@ main > section:last-of-type { border-bottom: none; }
     background: var(--color-bg-alt);
     border-radius: var(--radius-md);
 }
+/* :not()  */
 .music__item:not(:last-child) { margin-bottom: 0; }
 .music__song { margin-bottom: var(--space-2xs); }
 .music__meta { color: var(--color-accent); font-size: 0.92em; margin-bottom: var(--space-2xs); }
 .music__genres { color: var(--color-text-muted); font-size: 0.9em; }
 
-/* --------------------------------------------------------------------------
-   13. Фільми — таблиця
-   -------------------------------------------------------------------------- */
+/*
+   13. Фільми — таблиця (обов'язковий елемент HTML-вимог)
+*/
 .movies { overflow-x: auto; }
 .movies__title { margin-bottom: var(--space-lg); }
 .movies__table {
     width: 100%;
-    min-width: 480px;
+    min-width: 30rem;
     border-collapse: collapse;
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -485,25 +494,24 @@ main > section:last-of-type { border-bottom: none; }
     font-family: var(--font-display);
     font-weight: 600;
 }
-/* nth-child — зебра-розмітка рядків */
+/* :nth-child — зебра-розмітка рядків */
 .movies__table tbody tr:nth-child(even) { background: var(--color-bg-alt); }
 .movies__table tbody tr:hover { background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)); }
 
-/* --------------------------------------------------------------------------
+/*
    14. Цілі
-   -------------------------------------------------------------------------- */
+*/
 .goals__title { margin-bottom: var(--space-lg); }
 .goals__list { display: flex; flex-direction: column; gap: var(--space-md); }
-.goals__item {
-    padding-bottom: var(--space-md);
-}
+.goals__item { padding-bottom: var(--space-md); }
+/* :not() */
 .goals__item:not(:last-child) { border-bottom: 1px dashed var(--color-border); }
 .goals__name { margin-bottom: var(--space-2xs); color: var(--color-accent); }
 .goals__progress { color: var(--color-text-muted); max-width: var(--content-width); }
 
-/* --------------------------------------------------------------------------
+/*
    15. Факти
-   -------------------------------------------------------------------------- */
+ */
 .facts__title { margin-bottom: var(--space-lg); }
 .facts__list {
     display: flex;
@@ -516,23 +524,23 @@ main > section:last-of-type { border-bottom: none; }
     padding-left: var(--space-lg);
     color: var(--color-text-muted);
 }
-/* ::before — маркер-крапка перед кожним фактом */
+/* ::before — маркер-крапка перед кожним фактом*/
 .facts__item::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0.55em;
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     background: var(--color-accent-2);
 }
-/* nth-child — легке вирівнювання альтернативних рядків */
+/* :nth-child */
 .facts__item:nth-child(even) { color: var(--color-text); }
 
-/* --------------------------------------------------------------------------
+/*
    16. Цитати
-   -------------------------------------------------------------------------- */
+  */
 .quotes__title { margin-bottom: var(--space-lg); }
 .quotes__list {
     display: grid;
@@ -566,16 +574,17 @@ main > section:last-of-type { border-bottom: none; }
     font-size: 0.9em;
 }
 
-/* --------------------------------------------------------------------------
+/*
    17. Контакти / форма
-   -------------------------------------------------------------------------- */
+    */
 .contacts__title { margin-bottom: var(--space-lg); }
 .contacts__form {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-    max-width: 480px;
+    max-width: 30rem;
     background: var(--color-surface);
+    backdrop-filter: blur(var(--surface-blur));
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
@@ -597,6 +606,7 @@ main > section:last-of-type { border-bottom: none; }
     padding: var(--space-sm);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+/* :hover */
 .contacts__input:hover,
 .contacts__select:hover,
 .contacts__textarea:hover { border-color: var(--color-accent); }
@@ -617,11 +627,12 @@ main > section:last-of-type { border-bottom: none; }
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .contacts__submit:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+/* :active  */
 .contacts__submit:active { transform: translateY(0); }
 
-/* --------------------------------------------------------------------------
+/*
    18. Підвал
-   -------------------------------------------------------------------------- */
+  */
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -636,13 +647,14 @@ main > section:last-of-type { border-bottom: none; }
 .footer__social,
 .footer__top-link { color: var(--color-accent); }
 .footer__top-link:hover { text-decoration: underline; }
+/* :active застосування 3 */
 .footer__top-link:active { transform: translateY(1px); display: inline-block; }
 
-/* --------------------------------------------------------------------------
-   19. Анімація появи (одна орестрована, при завантаженні)
-   -------------------------------------------------------------------------- */
+/*
+   19. Анімація появи
+   */
 @keyframes fade-up {
-    from { opacity: 0; transform: translateY(16px); }
+    from { opacity: 0; transform: translateY(1rem); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -655,16 +667,14 @@ main > section:last-of-type { border-bottom: none; }
     }
 }
 
-/* ==========================================================================
-   ПЛАНШЕТ — від 768px
-   ========================================================================== */
+/*   ПЛАНШЕТ   */
 @media (min-width: 768px) {
 
     main section,
     .header__inner,
     .footer { padding-left: var(--space-xl); padding-right: var(--space-xl); }
 
-    /* навігація — горизонтальний ряд посилань під логотипом, без «бургера» */
+    /* навігація */
     .header__inner { flex-direction: column; align-items: flex-start; }
     .nav__toggle summary { display: none; }
     .nav__toggle[open] .nav__list,
@@ -682,7 +692,7 @@ main > section:last-of-type { border-bottom: none; }
     }
     .nav__list .nav__item:not(:last-child) { margin-right: var(--space-2xs); }
 
-    /* про мене — фото ліворуч, текст праворуч */
+    /* про мене — фото ліворуч, текст праворуч (Flexbox) */
     .hero__inner {
         flex-direction: row;
         align-items: center;
@@ -691,41 +701,39 @@ main > section:last-of-type { border-bottom: none; }
     }
     .hero__contacts { justify-content: flex-start; }
 
-    /* сітки — 2 колонки на планшеті (auto-fit подбає сам, тут задаємо мінімум) */
-    .hobbies__grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+    /* сітки  */
+    .hobbies__grid { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
     .books__grid { grid-template-columns: repeat(2, 1fr); }
     .quotes__list { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ==========================================================================
-   ДЕСКТОП — від 1200px
-   ========================================================================== */
+/* ДЕСКТОП */
 @media (min-width: 1200px) {
 
     main section,
     .header__inner,
     .footer { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
 
-    /* навігація — один рядок разом із логотипом */
+    /* навігація */
     .header__inner { flex-direction: row; align-items: center; }
     .nav__list { width: auto; justify-content: flex-end; }
 
-    /* про мене — дві колонки + бічна панель контактів (Grid) */
+    /* про мене — дві колонки + бічна панель контактів (CSS Grid) */
     .hero__inner {
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
         gap: var(--space-2xl);
         text-align: left;
-        max-width: 1100px;
+        max-width: 68.75rem;
     }
     .hero__contacts { flex-direction: column; align-items: flex-start; }
 
-    /* сітки — 3–4 колонки на десктопі */
+    /* сітки  */
     .hobbies__grid { grid-template-columns: repeat(4, 1fr); }
     .books__grid { grid-template-columns: repeat(3, 1fr); }
 
-    /* обмежена ширина тексту для комфортного читання */
+    /* ширина тексту (≈70ch) */
     .hero__intro,
     .education__text,
     .subjects__reason,
