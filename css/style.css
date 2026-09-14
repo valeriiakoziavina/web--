@@ -494,6 +494,13 @@ books__title { margin-bottom: var(--space-lg); }
     font-family: var(--font-display);
     font-weight: 600;
 }
+.movies__poster {
+    width: 3.75rem;
+    height: 5.625rem;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-alt);
+}
 /* :nth-child — зебра-розмітка рядків */
 .movies__table tbody tr:nth-child(even) { background: var(--color-bg-alt); }
 .movies__table tbody tr:hover { background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)); }
