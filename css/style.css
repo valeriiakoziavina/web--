@@ -694,10 +694,20 @@ main > section:last-of-type { border-bottom: none; }
 
     main section,
     .header__inner,
-    .footer { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+    .footer {
+        padding-left: var(--space-2xl);
+        padding-right: var(--space-2xl);
+    }
 
-    .header__inner { flex-direction: row; align-items: center; }
-    .nav__list { width: auto; justify-content: flex-end; }
+    .header__inner {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav__list {
+        width: auto;
+        justify-content: flex-end;
+    }
 
     .hero__inner {
         display: grid;
@@ -707,11 +717,24 @@ main > section:last-of-type { border-bottom: none; }
         text-align: left;
         max-width: 68.75rem;
     }
-    .hero__contacts { flex-direction: column; align-items: flex-start; }
 
-    .hobbies__grid { grid-template-columns: repeat(4, 1fr); }
-    .hobbies__icon { width: 6.5rem; height: 6.5rem; }
-    .books__grid { grid-template-columns: repeat(3, 1fr); }
+    .hero__contacts {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hobbies__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hobbies__icon {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .books__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 
     .travel__gallery {
@@ -719,22 +742,36 @@ main > section:last-of-type { border-bottom: none; }
         grid-auto-rows: 13rem;
         gap: var(--space-md);
     }
+
     .travel__figure {
         display: flex;
         flex-direction: column;
     }
-    .travel__figure:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-    .travel__figure:nth-child(4) { grid-row: span 2; }
+
+    .travel__figure:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .travel__figure:nth-child(4) {
+        grid-row: span 2;
+    }
+
     .travel__photo {
         flex: 1 1 auto;
         min-height: 0;
         height: auto;
         width: 100%;
     }
-    .travel__caption { flex: 0 0 auto; }
+
+    .travel__caption {
+        flex: 0 0 auto;
+    }
 
     .hero__intro,
     .education__text,
     .subjects__reason,
-    .goals__progress { max-width: var(--content-width); }
+    .goals__progress {
+        max-width: var(--content-width);
+    }
 }
