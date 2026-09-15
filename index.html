@@ -16,7 +16,6 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-</label>
 <body>
 
 
@@ -36,6 +35,7 @@
                     <li class="nav__item"><a class="nav__link" href="#favorite-subjects">Улюблені предмети</a></li>
                     <li class="nav__item"><a class="nav__link" href="#skills">Навички</a></li>
                     <li class="nav__item"><a class="nav__link" href="#hobbies">Хобі</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#travel">Подорожі</a></li>
                     <li class="nav__item"><a class="nav__link" href="#books">Книги</a></li>
                     <li class="nav__item"><a class="nav__link" href="#music">Музика</a></li>
                     <li class="nav__item"><a class="nav__link" href="#movies">Фільми</a></li>
@@ -57,10 +57,10 @@
         <div class="hero__inner">
 
             <picture class="hero__photo-wrap">
-                <source media="(min-width: 768px)" srcset="img/photo-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/me.jpg">
                 <img
                         class="hero__photo"
-                        src="img/photo-mobile.jpg"
+                        src="img/me.jpg"
                         alt="Фото Валерії"
                         width="200"
                         height="200"
@@ -68,7 +68,7 @@
                 >
             </picture>
 
-            <h1 class="hero__name">Валерія</h1>
+            <h1 class="hero__name">Козявіна Валерія Юріївна</h1>
 
             <p class="hero__intro">
                 Привіт! Мене звати Валерія, мені 19 років. Я народилася в місті Кам'янське,
@@ -86,24 +86,24 @@
     <!-- 2. Освіта: школа -->
     <section class="education" id="education-school">
         <h2 class="education__title">Освіта: школа</h2>
-        <article class="education__card">
+        <div class="education__card">
             <p class="education__text">
                 Закінчила ліцей №44 у місті Кам'янське у 2024 році.
             </p>
-        </article>
+        </div>
     </section>
 
     <!-- 3. Освіта: університет -->
     <section class="education" id="education-university">
         <h2 class="education__title">Освіта: університет</h2>
-        <article class="education__card">
+        <div class="education__card">
             <p class="education__text">
                 Навчаюся у Львівському національному університеті ім. Івана Франка
                 за спеціальністю «Прикладна математика», зараз на 3 курсі.
                 Найбільше запам'яталися дисципліни: чисельні методи лінійної алгебри
                 та дискретна математика.
             </p>
-        </article>
+        </div>
     </section>
 
     <!-- 4. Улюблені навчальні предмети -->
@@ -212,22 +212,49 @@
         <h2 class="hobbies__title">Хобі та захоплення</h2>
         <ul class="hobbies__grid">
             <li class="hobbies__card">
-                <img class="hobbies__icon" src="img/20.jpg" alt="" width="48" height="48" loading="lazy">
+                <img class="hobbies__icon" src="img/reading.jpg" alt="" width="48" height="48" loading="lazy">
                 <h3 class="hobbies__name">Читання</h3>
             </li>
             <li class="hobbies__card">
-                <img class="hobbies__icon" src="img/gitara.jpg" alt="" width="48" height="48" loading="lazy">
+                <img class="hobbies__icon" src="img/guitar.jpg" alt="" width="48" height="48" loading="lazy">
                 <h3 class="hobbies__name">Гра на гітарі</h3>
             </li>
             <li class="hobbies__card">
-                <img class="hobbies__icon" src="img/6.jpg" alt="" width="48" height="48" loading="lazy">
+                <img class="hobbies__icon" src="img/traveling.jpg" alt="" width="48" height="48" loading="lazy">
                 <h3 class="hobbies__name">Подорожі</h3>
             </li>
             <li class="hobbies__card">
-                <img class="hobbies__icon" src="img/7.jpg" alt="" width="48" height="48" loading="lazy">
+                <img class="hobbies__icon" src="img/sport.jpg" alt="" width="48" height="48" loading="lazy">
                 <h3 class="hobbies__name">Спорт</h3>
             </li>
         </ul>
+    </section>
+
+    <!-- 16. Подорожі -->
+    <section class="travel" id="travel">
+        <h2 class="travel__title">Подорожі та місця</h2>
+        <div class="travel__gallery">
+            <figure class="travel__figure">
+                <img class="travel__photo" src="img/k1.jpg" alt=">Київ. Києво-Печерська лавра" width="400" height="300" loading="lazy">
+                <figcaption class="travel__caption">Київ. Києво-Печерська лавра</figcaption>
+            </figure>
+            <figure class="travel__figure">
+                <img class="travel__photo" src="img/k2.jpg" alt="Київ. Вид на монумент «Батьківщина-мати» " width="400" height="300" loading="lazy">
+                <figcaption class="travel__caption">Київ. Вид на монумент «Батьківщина-мати» </figcaption>
+            </figure>
+            <figure class="travel__figure">
+                <img class="travel__photo" src="img/k3.jpg" alt="Київ. Колишній маєток Віктора Януковича" width="400" height="300" loading="lazy">
+                <figcaption class="travel__caption">Київ. Колишній маєток Віктора Януковича</figcaption>
+            </figure>
+            <figure class="travel__figure">
+                <img class="travel__photo" src="img/y3.jpg" alt="Яремче. Гора Маковиця" width="400" height="300" loading="lazy">
+                <figcaption class="travel__caption">Яремче. Гора Маковиця</figcaption>
+            </figure>
+            <figure class="travel__figure">
+                <img class="travel__photo" src="img/y6.jpeg" alt="Яремче. Водоспад «Дівочі сльози»" width="400" height="300" loading="lazy">
+                <figcaption class="travel__caption">Яремче. Водоспад «Дівочі сльози»</figcaption>
+            </figure>
+        </div>
     </section>
 
     <!-- 7. Улюблені книги -->
@@ -235,7 +262,7 @@
         <h2 class="books__title">Улюблені книги</h2>
         <ul class="books__grid">
             <li class="books__card">
-                <img class="books__cover" src="img/5.jpg.jpg" alt="Обкладинка трилогії «Макова війна»" width="140" height="200" loading="lazy">
+                <img class="books__cover" src="img/5.jpg" alt="Обкладинка трилогії «Макова війна»" width="140" height="200" loading="lazy">
                 <h3 class="books__name">«Макова війна» (трилогія)</h3>
                 <p class="books__author">Ребекка Кван</p>
                 <p class="books__impression">
@@ -244,7 +271,7 @@
                 </p>
             </li>
             <li class="books__card">
-                <img class="books__cover" src="img/1.jpg.jpg" alt="Обкладинка трилогії «Той птах, що п'є сльози»" width="140" height="200" loading="lazy">
+                <img class="books__cover" src="img/1.jpg" alt="Обкладинка трилогії «Той птах, що п'є сльози»" width="140" height="200" loading="lazy">
                 <h3 class="books__name">«Той птах, що п'є сльози» (трилогія)</h3>
                 <p class="books__author">Лі Йондо</p>
                 <p class="books__impression">
@@ -291,7 +318,7 @@
         </ul>
     </section>
 
-    <!-- 9. Улюблені фільми — таблиця (обов'язковий елемент за завданням) -->
+    <!-- 9. Улюблені фільми — таблиця -->
     <section class="movies" id="movies">
         <h2 class="movies__title">Улюблені фільми</h2>
         <table class="movies__table">
@@ -305,19 +332,19 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td><img class="movies__poster" src="img/movies/iron-man.jpg" alt="Постер фільму «Залізна людина»" width="60" height="90" loading="lazy"></td><td>Залізна людина</td><td>2008</td><td>7.9</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/iron-man-2.jpg" alt="Постер фільму «Залізна людина 2»" width="60" height="90" loading="lazy"></td><td>Залізна людина 2</td><td>2010</td><td>6.9</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/iron-man-3.jpg" alt="Постер фільму «Залізна людина 3»" width="60" height="90" loading="lazy"></td><td>Залізна людина 3</td><td>2013</td><td>7.1</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/atonement.jpg" alt="Постер фільму «Спокута»" width="60" height="90" loading="lazy"></td><td>Спокута</td><td>2007</td><td>7.8</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/inception.jpg" alt="Постер фільму «Початок»" width="60" height="90" loading="lazy"></td><td>Початок</td><td>2010</td><td>8.8</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/10-things.jpg" alt="Постер фільму «10 речей, які я в тобі ненавиджу»" width="60" height="90" loading="lazy"></td><td>10 речей, які я в тобі ненавиджу</td><td>1999</td><td>7.3</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/kill-bill-1.jpg" alt="Постер фільму «Убити Білла. Фільм 1»" width="60" height="90" loading="lazy"></td><td>Убити Білла. Фільм 1</td><td>2003</td><td>8.2</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/kill-bill-2.jpg" alt="Постер фільму «Убити Білла. Фільм 2»" width="60" height="90" loading="lazy"></td><td>Убити Білла. Фільм 2</td><td>2004</td><td>8.0</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/constantine.jpg" alt="Постер фільму «Константин: Володар темряви»" width="60" height="90" loading="lazy"></td><td>Константин: Володар темряви</td><td>2005</td><td>7.0</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/leon.jpg" alt="Постер фільму «Леон-кілер»" width="60" height="90" loading="lazy"></td><td>Леон-кілер</td><td>1994</td><td>8.5</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/spider-man-bnd.jpg" alt="Постер фільму «Людина-павук: Абсолютно новий день»" width="60" height="90" loading="lazy"></td><td>Людина-павук: Абсолютно новий день</td><td>2026</td><td>7.9</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/avengers-iw.jpg" alt="Постер фільму «Месники: Війна нескінченності»" width="60" height="90" loading="lazy"></td><td>Месники: Війна нескінченності</td><td>2018</td><td>8.4</td></tr>
-            <tr><td><img class="movies__poster" src="img/movies/avengers-endgame.jpg" alt="Постер фільму «Месники: Завершення»" width="60" height="90" loading="lazy"></td><td>Месники: Завершення</td><td>2019</td><td>8.4</td></tr>
+            <tr><td><img class="movies__poster" src="img/4.jpeg" alt="Постер фільму «Залізна людина»" width="60" height="90" loading="lazy"></td><td>Залізна людина</td><td>2008</td><td>7.9</td></tr>
+            <tr><td><img class="movies__poster" src="img/3.jpg" alt="Постер фільму «Залізна людина 2»" width="60" height="90" loading="lazy"></td><td>Залізна людина 2</td><td>2010</td><td>6.9</td></tr>
+            <tr><td><img class="movies__poster" src="img/2.jpg" alt="Постер фільму «Залізна людина 3»" width="60" height="90" loading="lazy"></td><td>Залізна людина 3</td><td>2013</td><td>7.1</td></tr>
+            <tr><td><img class="movies__poster" src="img/21.jpg" alt="Постер фільму «Спокута»" width="60" height="90" loading="lazy"></td><td>Спокута</td><td>2007</td><td>7.8</td></tr>
+            <tr><td><img class="movies__poster" src="img/11.jpg" alt="Постер фільму «Початок»" width="60" height="90" loading="lazy"></td><td>Початок</td><td>2010</td><td>8.8</td></tr>
+            <tr><td><img class="movies__poster" src="img/10.jpg" alt="Постер фільму «10 речей, які я в тобі ненавиджу»" width="60" height="90" loading="lazy"></td><td>10 речей, які я в тобі ненавиджу</td><td>1999</td><td>7.3</td></tr>
+            <tr><td><img class="movies__poster" src="img/12.jpg" alt="Постер фільму «Убити Білла. Фільм 1»" width="60" height="90" loading="lazy"></td><td>Убити Білла. Фільм 1</td><td>2003</td><td>8.2</td></tr>
+            <tr><td><img class="movies__poster" src="img/13.jpg" alt="Постер фільму «Убити Білла. Фільм 2»" width="60" height="90" loading="lazy"></td><td>Убити Білла. Фільм 2</td><td>2004</td><td>8.0</td></tr>
+            <tr><td><img class="movies__poster" src="img/14.jpg" alt="Постер фільму «Константин: Володар темряви»" width="60" height="90" loading="lazy"></td><td>Константин: Володар темряви</td><td>2005</td><td>7.0</td></tr>
+            <tr><td><img class="movies__poster" src="img/15.JPG" alt="Постер фільму «Леон-кілер»" width="60" height="90" loading="lazy"></td><td>Леон-кілер</td><td>1994</td><td>8.5</td></tr>
+            <tr><td><img class="movies__poster" src="img/16.jpg" alt="Постер фільму «Людина-павук: Абсолютно новий день»" width="60" height="90" loading="lazy"></td><td>Людина-павук: Абсолютно новий день</td><td>2026</td><td>7.9</td></tr>
+            <tr><td><img class="movies__poster" src="img/18.jpg" alt="Постер фільму «Месники: Війна нескінченності»" width="60" height="90" loading="lazy"></td><td>Месники: Війна нескінченності</td><td>2018</td><td>8.4</td></tr>
+            <tr><td><img class="movies__poster" src="img/19.png" alt="Постер фільму «Месники: Завершення»" width="60" height="90" loading="lazy"></td><td>Месники: Завершення</td><td>2019</td><td>8.4</td></tr>
             </tbody>
         </table>
     </section>
@@ -413,7 +440,8 @@
         </ul>
     </section>
 
-    <!-- 16. Контакти / зворотний зв'язок -->
+
+    <!-- 1. Контакти / зворотний зв'язок -->
     <section class="contacts" id="contacts">
         <h2 class="contacts__title">Контакти</h2>
 
